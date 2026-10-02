@@ -1,0 +1,67 @@
+:root {
+  --bg: #0d0d0d;
+  --text: #e0e0e0;
+  --accent: #ff06b5; /*did you played cyberpunk?*/
+  --card-bg: #161616;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Courier New', monospace; 
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 1.5rem;
+  flex: 1 1 280px; 
+}
+
+.div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.photoofmine{
+    width: 200px;
+    height: 200px;
+    align-content: center;
+    display: flex;
+    justify-content: center  ;
+    align-items: center;
+    border-radius: 50%;
+
+}
+
+.imagecard{
+    display: flex;
+    background: #55bd74;
+    height: 15%;
+    width: 15%;
+}
