@@ -1,67 +1,211 @@
 :root {
-  --bg: #0d0d0d;
-  --text: #e0e0e0;
-  --accent: #ff06b5; /*did you played cyberpunk?*/
-  --card-bg: #161616;
+  --bg: #111111;
+  --panel: #191919;
+  --surface: #1f1f1f;
+  --text: #e8e8e8;
+  --muted: #aaaaaa;
+  --line: #4a4a4a;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Courier New', monospace; 
-  line-height: 1.6;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.55;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 20px;
+}
+
+.nav {
   align-items: center;
-  padding: 1.5rem 2rem;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-
-.card-grid {
+  border-bottom: 1px solid var(--line);
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  padding: 2rem;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 22px 0;
 }
 
-.card {
-  background: var(--card-bg);
-  border: 1px solid #2a2a2a;
-  border-radius: 8px;
-  padding: 1.5rem;
-  flex: 1 1 280px; 
+.brand {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
-.div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.photoofmine{
-    width: 200px;
-    height: 200px;
-    align-content: center;
-    display: flex;
-    justify-content: center  ;
-    align-items: center;
-    border-radius: 50%;
-
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
-.imagecard{
-    display: flex;
-    background: #55bd74;
-    height: 15%;
-    width: 15%;
+.links a {
+  border: 1px solid transparent;
+  color: var(--muted);
+  font-size: 0.82rem;
+  padding: 6px 10px;
+}
+
+.links a:hover,
+.links a.active {
+  border-color: var(--line);
+  color: var(--text);
+}
+
+.main {
+  padding: 30px 0 56px;
+}
+
+.section {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  margin-bottom: 16px;
+  padding: 20px;
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(1.95rem, 5.8vw, 3rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  margin-bottom: 14px;
+}
+
+h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 58ch;
+}
+
+.intro {
+  border: 1px solid var(--line);
+  padding: 12px;
+}
+
+.link-list {
+  display: grid;
+  gap: 10px;
+}
+
+.link-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+}
+
+.link-card:hover {
+  background: #252525;
+}
+
+.link-card span {
+  font-size: 0.96rem;
+  font-weight: 500;
+}
+
+.link-card small {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.profile-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-list {
+  display: grid;
+  gap: 10px;
+}
+
+.profile-card,
+.project {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 14px;
+}
+
+.profile-card p,
+.project p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-bottom: 10px;
+}
+
+.profile-card small,
+.project small {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  display: flex;
+  font-size: 0.78rem;
+  justify-content: space-between;
+  padding: 16px 0 30px;
+}
+
+.footer a {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1px;
+}
+
+@media (max-width: 740px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .main {
+    padding: 20px 0 40px;
+  }
+
+  .section {
+    padding: 14px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 8px;
+  }
 }

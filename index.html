@@ -1,51 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
   <title>Gajanan Lohar — Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <a href="index.html" class="logo">gajanan</a>
-    <ul class="nav-links">
-      <li><a href="index.html">home</a></li>
-      <li><a href="about.html">about</a></li>
-      <li><a href="projects.html">projects</a></li>
-      <li><a href="contact.html">contact</a></li>
-    </ul>
-  </nav>
-  <div>
-
-  <header class="mainpara">
-    <h1>Hi, I'm Gajanan.</h1>
-    <p>Coder / builder / storyteller.</p>
-  </header>
-
-
-  </div>
-  <div class="imagecard">
-    <img class="photoofmine" src="Gajanan.jpg" alt="A very cool kiddo">
-  </div>
-
-
-  <section class="featured-work">
-    <h2>Featured Work</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>Project Name</h3>
-        <p>One-line description.</p>
-        <a href="projects.html">View →</a>
+  <div class="container">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">Gajanan Lohar</a>
+      <div class="links">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
       </div>
-      <!-- repeat .card for each featured project -->
-    </div>
-  </section>
+    </nav>
 
-  <footer>
-    <p>&copy; 2026 Gajanan Lohar</p>
-  </footer>
+    <main class="main">
+      <section class="section">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Gajanan Lohar</h1>
+        <p class="lead intro">Game Dev, Computer network Expert and Home Labbing And occasional poet.</p>
+      </section>
 
-  <script src="js/script.js"></script>
+      <section class="section">
+        <h2>Selected projects</h2>
+        <div class="link-list">
+          <a class="link-card" href="projects.html">
+            <span>WellCheck</span>
+            <small>A app made for elders</small>
+          </a>
+          <a class="link-card" href="projects.html">
+            <span>Cyberspace</span>
+            <small>the Cyberspace/net from cyberpunk 2077</small>
+          </a>
+          <a class="link-card" href="projects.html">
+            <span>Aegis</span>
+            <small>Linux Distro specially made for Home labbing.</small>
+          </a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>About this work</h2>
+        <p class="intro">The direction is intentionally plain: neutral color, thin lines, readable type, and responsive structure. The goal is to keep attention on content and hierarchy.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 Gajanan Lohar</span>
+      <a href="contact.html">Get in touch</a>
+    </footer>
+  </div>
 </body>
 </html>
