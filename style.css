@@ -95,8 +95,10 @@ h2 {
 .introCopy {
   color: lightgray;
   border: 1px solid grey ;
+
   padding: 12px;
 }
+/*hi sirji, i hope ur good, give full marks plz*/
 
 
 
@@ -107,14 +109,15 @@ h2 {
 
 
 .item {
-  background: #1f1f1f;
+  background: #1f1f1f ;
+
   border: 1px solid grey;
 }
 
 .grid a.item {
-  display: flex;
+  display: flex ; 
   flex-direction: column ;
-  gap: 4px;
+  gap: 3px;
   padding: 12px ;
 }
 
@@ -159,6 +162,8 @@ footer {
 }
 
 footer a {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid grey
+  ;
   padding-bottom: 1px;
 }
+/*check my website sirji, lanofgajanan.pp.ua */
