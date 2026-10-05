@@ -1,22 +1,14 @@
-:root {
-  --bg: #111111;
-  --panel: #191919;
-  --surface: #1f1f1f;
-  --text: #e8e8e8;
-  --muted: #aaaaaa;
-  --line: #4a4a4a;
-}
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Segoe UI", Arial, sans-serif;
+  color: #e8e8e8;
+  background: black;
+  font-family: "Segoe UI", Arial, sans-serif ;
   line-height: 1.55;
 }
 
@@ -25,187 +17,148 @@ a {
   text-decoration: none;
 }
 
-.container {
+
+
+.page {
+  padding: 0 20px;
   margin: 0 auto;
   max-width: 980px;
-  padding: 0 20px;
 }
 
-.nav {
-  align-items: center;
-  border-bottom: 1px solid var(--line);
+nav {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 12px;
   justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid grey;
   padding: 22px 0;
 }
 
 .brand {
   font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  font-weight: 600
+  ;
 }
 
 .links {
+  gap: 14px;
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
 }
 
 .links a {
   border: 1px solid transparent;
-  color: var(--muted);
+  color: lightgray;
   font-size: 0.82rem;
   padding: 6px 10px;
 }
 
-.links a:hover,
 .links a.active {
-  border-color: var(--line);
-  color: var(--text);
+  border-color: grey ;
+  color: #e8e8e8;
 }
 
-.main {
+
+
+main {
   padding: 30px 0 56px;
 }
 
-.section {
-  background: var(--panel);
-  border: 1px solid var(--line);
+section {
+  background: #191919;
+  border: 1px solid grey
+  ;
   margin-bottom: 16px;
   padding: 20px;
 }
 
-.eyebrow {
-  color: var(--muted);
+.label {
+  color: lightgray;
   font-size: 0.75rem;
-  letter-spacing: 0.04em;
   margin-bottom: 8px;
-  text-transform: uppercase;
 }
 
 h1 {
-  font-size: clamp(1.95rem, 5.8vw, 3rem);
+  font-size: 3rem;
   font-weight: 500;
-  letter-spacing: -0.02em;
   line-height: 1.12;
   margin-bottom: 14px;
 }
 
 h2 {
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 600 ;
   margin-bottom: 10px;
 }
 
-.lead {
-  color: var(--muted);
-  max-width: 58ch;
-}
-
-.intro {
-  border: 1px solid var(--line);
+.introCopy {
+  color: lightgray;
+  border: 1px solid grey ;
   padding: 12px;
 }
 
-.link-list {
+
+
+.grid {
   display: grid;
   gap: 10px;
 }
 
-.link-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
+
+.item {
+  background: #1f1f1f;
+  border: 1px solid grey;
+}
+
+.grid a.item {
   display: flex;
-  flex-direction: column;
+  flex-direction: column ;
   gap: 4px;
-  padding: 12px;
+  padding: 12px ;
 }
 
-.link-card:hover {
-  background: #252525;
+
+.grid a.item span {
+  font-size: 0.96rem ;
+  font-weight: 500 ;
 }
 
-.link-card span {
-  font-size: 0.96rem;
-  font-weight: 500;
+.item small {
+  color: lightgray ;
+  font-size: 0.8rem  ;
 }
 
-.link-card small {
-  color: var(--muted);
-  font-size: 0.8rem;
+.bioGrid {
+  display: grid  ;
+  gap: 10px ;
+  grid-template-columns: 1fr 1fr;
 }
 
-.profile-grid {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.bioGrid .item,
+.grid article.item {
+  padding: 14px ;
 }
 
-.project-list {
-  display: grid;
-  gap: 10px;
-}
-
-.profile-card,
-.project {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  padding: 14px;
-}
-
-.profile-card p,
-.project p {
-  color: var(--muted);
-  font-size: 0.92rem;
+.bioGrid .item p,
+.grid article.item p {
+  color: lightgray ;
+  font-size: 0.92rem ;
   margin-bottom: 10px;
 }
 
-.profile-card small,
-.project small {
-  color: var(--muted);
-  font-size: 0.78rem;
-}
 
-.footer {
-  border-top: 1px solid var(--line);
-  color: var(--muted);
+
+footer {
   display: flex;
+  border-top: 1px solid grey;
+  color: lightgray;
   font-size: 0.78rem;
   justify-content: space-between;
   padding: 16px 0 30px;
 }
 
-.footer a {
-  border-bottom: 1px solid var(--line);
+footer a {
+  border-bottom: 1px solid grey;
   padding-bottom: 1px;
-}
-
-@media (max-width: 740px) {
-  .container {
-    padding: 0 14px;
-  }
-
-  .nav {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .main {
-    padding: 20px 0 40px;
-  }
-
-  .section {
-    padding: 14px;
-  }
-
-  .profile-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer {
-    flex-direction: column;
-    gap: 8px;
-  }
 }
